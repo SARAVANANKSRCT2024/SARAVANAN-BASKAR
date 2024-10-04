@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main()
+{
+    int n=40;
+    if(n==0)
+    {
+        printf("zeri\n");
+    }
+else if (n<0)
+{
+    printf("negative \n");
+}
+else
+{
+    printf("positive\n");
+}
+    return 0;
+}
