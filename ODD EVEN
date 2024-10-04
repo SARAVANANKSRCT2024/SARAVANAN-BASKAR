@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int n=101;
+    int r=n%2;
+    if(r==0)
+{
+    printf("even");
+}
+else
+{
+    printf("odd");
+}
+    return 0;
+}
