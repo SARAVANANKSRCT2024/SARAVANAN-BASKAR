@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    char ch='a';
+    if (ch=='a'|| ch=='A' || ch=='e'||ch=='E' || ch=='o'|| ch=='O'|| ch=='u'||ch=='U')
+    {
+    printf("the character %c  is a vowel\n",ch);
+    }
+else
+{
+     printf("the character %c  is a  constant\n",ch);
+}
+    return 0;
+}
