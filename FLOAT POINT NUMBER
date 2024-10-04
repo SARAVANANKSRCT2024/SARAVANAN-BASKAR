@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+    float a=2.12, b=3.88,product;
+    product=a*b;
+    printf("product of enter the number is:%.3f",product);
+    return 0;
+}
