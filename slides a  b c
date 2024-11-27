@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d;
+
+    // Input four sides
+    printf("Enter the lengths of the four sides (a, b, c, d): ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    // Check if it forms a rectangle
+    if ((a == c && b == d) || (a == b && c == d))
+    {
+        printf("The given sides can form a rectangle.\n");
+    }
+    else 
+    {
+        printf("The given sides cannot form a rectangle.\n");
+    }
+
+    return 0;
+}
+
