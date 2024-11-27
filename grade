@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() 
+{
+    char grade;
+
+    // Prompt the user to input a grade
+    printf("Enter a grade (E, V, G, A, F): ");
+    scanf(" %c", &grade);
+
+    // Determine the grade description
+    switch (grade) 
+    {
+        case 'E':
+        case 'e':
+            printf("Grade: Excellent\n");
+            break;
+        case 'V':
+        case 'v':
+            printf("Grade: Very Good\n");
+            break;
+        case 'G':
+        case 'g':
+            printf("Grade: Good\n");
+            break;
+        case 'A':
+        case 'a':
+            printf("Grade: Average\n");
+            break;
+        case 'F':
+        case 'f':
+            printf("Grade: Fail\n");
+            break;
+        default:
+            printf("Invalid grade entered.\n");
+    }
+
+    return 0;
+}
+
