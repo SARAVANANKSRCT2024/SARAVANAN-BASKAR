@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+void rightRotate(int arr[], int n, int size) 
+{
+    // Create a temporary array to store rotated values
+    int temp[n];
+    
+    // Store the last 'n' elements in the temporary array
+    for (int i = 0; i < n; i++)
+    {
+        temp[i] = arr[size - n + i];
+    }
+
+    // Shift the remaining elements of the array to the right
+    for (int i = size - 1; i >= n; i--) 
+    {
+        arr[i] = arr[i - n];
+    }
+
+    // Copy the temporary array elements back to the array
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = temp[i];
+    }
+}
+
+int main() 
+{
+    int n, size;
+
+    // Input the number of elements in the array
+    printf("Enter the number of elements in array: ");
+    scanf("%d", &size);
+
+    int arr[size];
+
+    // Input the array elements
+    printf("Enter %d elements in the array: ", size);
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    // Input number of positions to rotate
+    printf("Enter the number of positions to rotate: ");
+    scanf("%d", &n);
+
+    // Handle cases where n is greater than size of the array
+    n = n % size;
+
+    // Right rotate the array by n positions
+    rightRotate(arr, n, size);
+
+    // Output the rotated array
+    printf("Array after right rotation: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
